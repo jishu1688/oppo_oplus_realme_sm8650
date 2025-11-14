@@ -1,31 +1,31 @@
-name: 加速版构建 6.1.57 欧加真OKI内核
+名字: 加速版构建 6.1.57 欧加真OKI内核
 
-env:
-  TZ: Asia/Shanghai
-  ANDROID_VERSION: 'android14'
-  KERNEL_VERSION: '6.1'
-  KERNEL_NAME: 'android14-11-o-gca13bffobf09'
+包封/包围（动词envelop的简写）:
+坦桑尼亚: 亚洲/上海
+ANDROID _版本: 安卓14
+内核版本: '6.1'
+内核名称: '安卓14-11-o-gca13bffob888 '
 
-on:
-  workflow_dispatch:
-    inputs:
-      ksu_type:
-        description: 'KernelSU分支(SukiSU Ultra/KernelSU Next,默认SukiSU Ultra)'
-        required: true
-        type: choice
-        default: 'sukisu'
-        options:
-          - 'sukisu'
-          - 'ksunext'
-      hook_method:
-        description: hook模式(大部分情况manual即可，若新版manual钩子出现问题可尝试syscall, 少数需切换sus su模式的场景才需要kprobes钩子)
-        required: true
-        type: choice
-        default: 'manual'
-        options:
-          - 'manual'
-          - 'syscall'
-          - 'kprobes'
+在:
+工作流_调度:
+输入:
+ksu_type:
+描述: 克内尔苏分支(SukiSU Ultra/KernelSU接下来，默认suki su Ultra)’
+需要: 真实的
+类型: 选择
+系统默认值: sukisu
+选择:
+          - sukisu
+          - ksunext ksunext ksunext '
+钩子方法:
+描述: 钩模式（大部分情况指南即可,若新版指南钩子出现问题可尝试系统调用，少数需切换苏苏模式的场景才需要k探针钩子)
+需要: 真实的
+类型: 选择
+系统默认值: '手动'
+选择:
+          - '手动'
+          - 系统调用
+          - “kprobes”
       kpm_enable:
         description: '是否开启kpm(仅对sukisu生效; 可能轻微增加耗电，不需要可保持默认关闭)'
         required: true
